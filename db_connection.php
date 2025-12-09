@@ -1,7 +1,7 @@
 <?php
     $user='root';
     $password='';
-    $database='';
+    $database='drivemecrazy';
     $servername='localhost:3310';
 
     $mysqli=new mysqli($servername,$user,$password,$database);
