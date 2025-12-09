@@ -1,0 +1,227 @@
+:root {
+    --bg-dark: #0f172a;      
+    --bg-card: #1e293b;   
+    --primary: #38bdf8;      
+    --primary-hover: #0ea5e9;
+    --text-main: #f1f5f9;    
+    --text-muted: #94a3b8;   
+    --border: #22d3ee;     
+    --danger: #f43f5e;       
+    --input-bg: #334155;     
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    line-height: 1.6;
+    padding-bottom: 50px;
+}
+
+h2 {
+    color: var(--primary);
+    text-align: center;
+    margin: 2rem 0;
+    font-size: 2rem;
+}
+
+a {
+    color: var(--primary);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+a:hover {
+    color: #fff;
+    text-shadow: 0 0 5px var(--primary);
+}
+
+nav {
+    background-color: var(--bg-card);
+    padding: 1rem 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    border-bottom: 2px solid var(--primary);
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 20px;
+}
+
+nav a {
+    color: var(--text-main);
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding: 8px 16px;
+    border-radius: 4px;
+}
+
+nav a:hover {
+    background-color: var(--primary);
+    color: white;
+}
+
+.box, .login-box, form {
+    background-color: var(--bg-card);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    max-width: 500px;
+    margin: 2rem auto;
+    border: 1px solid #2f2f45;
+}
+
+body > form {
+    max-width: 600px;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--text-muted);
+    font-weight: 600;
+}
+
+input[type="text"], 
+input[type="email"], 
+input[type="password"], 
+input[type="number"], 
+input[type="date"], 
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 1.2rem;
+    border-radius: 6px;
+    border: 1px solid #3f3f5f;
+    background-color: var(--input-bg);
+    color: white;
+    font-size: 1rem;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 8px rgba(127, 90, 240, 0.3);
+}
+
+button {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background 0.3s;
+    width: 100%;
+}
+
+button:hover {
+    background-color: var(--primary-hover);
+}
+
+button[name="delete"] {
+    background-color: var(--danger);
+}
+button[name="delete"]:hover {
+    background-color: #d13652;
+}
+
+table {
+    width: 100%;
+    min-width: 1500px;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: var(--bg-card);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #2f2f45;
+}
+
+th {
+    background-color: var(--primary);
+    color: white;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+}
+
+tr:hover {
+    background-color: #242639;
+}
+
+input[readonly] {
+    background-color: transparent;
+    border: none;
+    color: var(--text-muted);
+    pointer-events: none;
+}
+
+.edit-mode {
+    background-color: rgba(127, 90, 240, 0.1) !important;
+    border-left: 4px solid var(--primary);
+}
+
+.edit-mode input:not([readonly]) {
+    background-color: var(--input-bg);
+    border: 1px solid var(--primary);
+    color: white;
+    pointer-events: auto;
+}
+
+.actions button {
+    width: auto;
+    padding: 6px 12px;
+    font-size: 0.8rem;
+    margin-right: 5px;
+    display: inline-block;
+}
+
+.error {
+    color: var(--danger);
+    background: rgba(239, 69, 101, 0.1);
+    border: 1px solid var(--danger);
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+}
+
+/* card style for browsing */
+.car-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.car-box {
+    background-color: var(--bg-card);
+    border: 1px solid #2f2f45;
+    border-radius: 8px;
+    width: 300px;
+    padding: 15px;
+    text-align: center;
+}
+.car-box img {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+    border-radius: 4px;
+}
